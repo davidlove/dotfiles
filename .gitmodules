@@ -1,0 +1,30 @@
+[submodule ".vim/pack/mypackages/start/SimpylFold"]
+	path = .vim/pack/mypackages/start/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule ".vim/pack/mypackages/start/lightline"]
+	path = .vim/pack/mypackages/start/lightline
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule ".vim/pack/mypackages/start/trailing-whitespace"]
+	path = .vim/pack/mypackages/start/trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace.git
+[submodule ".vim/pack/mypackages/start/gitgutter"]
+	path = .vim/pack/mypackages/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/pack/mypackages/start/fugitive"]
+	path = .vim/pack/mypackages/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/pack/mypackages/start/nerdtree"]
+	path = .vim/pack/mypackages/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/pack/mypackages/start/nerdtree-git-plugin"]
+	path = .vim/pack/mypackages/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule ".vim/pack/mypackages/start/supertab"]
+	path = .vim/pack/mypackages/start/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/pack/mypackages/start/surround"]
+	path = .vim/pack/mypackages/start/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/pack/mypackages/start/auto-pairs"]
+	path = .vim/pack/mypackages/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
