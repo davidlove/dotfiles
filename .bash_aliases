@@ -1,0 +1,67 @@
+# Bash aliases for David Love
+
+# General aliases
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls='ls -F'
+alias la='ls -aF'
+alias ld='ls -dF'
+alias ll='ls -lhF'
+alias lla='ls -alhF'
+alias l='ls'
+alias df='df -h'
+alias du='du -sh'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias prog="ps aux | grep "
+alias grep='grep -Hn --color=auto'
+
+# Compound clear and directory view commands
+alias cl='CLEARMARK="\e[33;1;40m ------------------------------------------------------------------------------ \e[0m"; echo -e $CLEARMARK; clear;'
+alias cls='clear; LOCATION="\e[36;1;40m $PWD \e[0m"; echo -e $LOCATION; ls -F'
+alias cla='clear; LOCATION="\e[36;1;40m $PWD \e[0m"; echo -e $LOCATION; ls -aF'
+alias cll='clear; LOCATION="\e[36;1;40m $PWD \e[0m"; echo -e $LOCATION; ls -lhF'
+alias clla='clear; LOCATION="\e[36;1;40m $PWD \e[0m"; echo -e $LOCATION; ls -alhF'
+
+# Permissions aliases
+alias 700='chmod 700'
+alias 600='chmod 600'
+alias 400='chmod 400'
+alias 644='chmod 644'
+
+# To make C or C++ code look readable
+alias astyle="astyle --style=allman --indent=spaces=3 --indent-switches --indent-cases --indent-col1-comments --pad-oper --pad-paren-in"
+
+# Python aliases
+alias spy='/usr/bin/python2.7'
+alias spython='spy'
+alias ipy='ipython'
+alias ipy2='ipython2'
+alias nb='jupyter notebook --no-browser --port=7557'
+
+COLOR='\[\e[34;1m\]' # light blue
+ML="$(hostname -s)"
+STOPCOLOR='\[\e[0m\]'
+export PS1="[\u@${ML} ${COLOR}\w${STOPCOLOR}]\$ "
+
+# Kill YARN Job
+alias ykill="yarn application -kill"
+
+# QSub into small queue
+alias qrshs="qrsh -q goldml_small -l h_rss=10G"
+
+# To change the paths dynamicall
+alias epp="source $HOME/bin/epp_code"
+alias bpp="source $HOME/bin/bpp_code"
+
+# Build jupyter slides
+function jupyter-slides() { jupyter nbconvert "${1}" --to slides --post serve; rm -f $(basename "${1}" .ipynb).slides.html ; }
+
+
+# Get real name of user
+
+function realname() { echo $(getent passwd $1 | cut -d: -f 5); }
