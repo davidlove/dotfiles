@@ -117,3 +117,7 @@ PROMPT="[%n@%m %{$fg_bold[blue]%}%*%{$reset_color%}]%# "
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)[%{$fg_bold[red]%}%~%{$reset_color%}]'
 
+# LS Colors on MAC
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
