@@ -133,3 +133,6 @@ map <C-o> :NERDTreeToggle<CR>
 " DVC
 autocmd! BufNewFile,BufRead Dvcfile,*.dvc setfiletype yaml
 
+" Pathogen (for VIM < 8.0)
+execute pathogen#infect()
+
