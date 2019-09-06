@@ -1,9 +1,0 @@
-VIM Packages
-------------
-
-This directory is setup to include VIM packages as submodules.
-The three scripts help to manage the packages.
-
-Pathogen is installed in autoload. This makes the packages work for Vim < 8.0.
-Pathogen repo: https://github.com/tpope/vim-pathogen
-
