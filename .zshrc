@@ -23,8 +23,15 @@ if [ -d "$HOME/anaconda3/bin" ] ; then
     PATH="$HOME/anaconda3/bin:$PATH"
 fi
 
-source ~/.bash_aliases
-source ~/.bash_ssh
+if [ -e "$HOME/.bash_aliases"  ]; then
+    source "$HOME/.bash_aliases"
+fi
+if [ -e "$HOME/.bash_ssh"  ]; then
+    source "$HOME/.bash_ssh"
+fi
+if [ -e "$HOME/.bash_spark"  ]; then
+    source "$HOME/.bash_spark"
+fi
 
 autoload -U colors && colors
 
