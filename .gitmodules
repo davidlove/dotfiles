@@ -28,3 +28,6 @@
 [submodule ".vim/pack/mypackages/start/auto-pairs"]
 	path = .vim/pack/mypackages/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule ".vim/pack/mypackages/start/FastFold"]
+	path = .vim/pack/mypackages/start/FastFold
+	url = https://github.com/Konfekt/FastFold.git

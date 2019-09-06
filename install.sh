@@ -6,6 +6,7 @@ for x in .*; do
     || [ $x = '.git' ] \
     || [ $x = '.gitignore' ] \
     || [ $x = '.gitmodules' ] \
+    || [ $x = 'README' ] \
     ; then
         continue
     fi
