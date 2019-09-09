@@ -31,3 +31,6 @@
 [submodule ".vim/pack/mypackages/start/FastFold"]
 	path = .vim/pack/mypackages/start/FastFold
 	url = https://github.com/Konfekt/FastFold.git
+[submodule ".vim/pack/mypackages/start/YouCompleteMe"]
+	path = .vim/pack/mypackages/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
