@@ -32,6 +32,9 @@ fi
 if [ -e "$HOME/.bash_spark"  ]; then
     source "$HOME/.bash_spark"
 fi
+if [ -e "$HOME/.extra_zshrc"  ]; then
+    source "$HOME/.extra_zshrc"
+fi
 
 autoload -U colors && colors
 
