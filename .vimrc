@@ -136,3 +136,9 @@ autocmd! BufNewFile,BufRead Dvcfile,*.dvc setfiletype yaml
 " Pathogen (for VIM < 8.0)
 execute pathogen#infect()
 
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
