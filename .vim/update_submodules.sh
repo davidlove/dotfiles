@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git submodule update --remote --merge
+git submodule update --init --recursive --jobs 8
 
