@@ -33,15 +33,12 @@ alias 600='chmod 600'
 alias 400='chmod 400'
 alias 644='chmod 644'
 
-# To make C or C++ code look readable
-alias astyle="astyle --style=allman --indent=spaces=3 --indent-switches --indent-cases --indent-col1-comments --pad-oper --pad-paren-in"
-
 # Python aliases
-alias spy='/usr/bin/python2.7'
-alias spython='spy'
 alias ipy='ipython'
 alias ipy2='ipython2'
-alias nb='jupyter notebook --no-browser --port=7557'
+alias nb='jupyter notebook --no-browser'
+alias jl='jupyter lab --no-browser'
+alias ca='conda activate'
 
 COLOR='\[\e[34;1m\]' # light blue
 ML="$(hostname -s)"
@@ -61,7 +58,6 @@ alias bpp="source $HOME/bin/bpp_code"
 # Build jupyter slides
 function jupyter-slides() { jupyter nbconvert "${1}" --to slides --post serve; rm -f $(basename "${1}" .ipynb).slides.html ; }
 
-
 # Get real name of user
-
 function realname() { echo $(getent passwd $1 | cut -d: -f 5); }
+
