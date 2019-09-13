@@ -34,3 +34,6 @@
 [submodule ".vim/pack/mypackages/start/vue"]
 	path = .vim/pack/mypackages/start/vue
 	url = https://github.com/posva/vim-vue.git
+[submodule ".vim/pack/mypackages/start/repeat"]
+	path = .vim/pack/mypackages/start/repeat
+	url = https://github.com/tpope/vim-repeat.git
