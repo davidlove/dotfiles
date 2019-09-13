@@ -1,4 +1,6 @@
 #!/bin/bash
 
-git submodule update --init --recursive --jobs 8
+CMD="git submodule update --init --recursive --rebase"
+echo "$CMD"
+eval "$CMD"
 
