@@ -1,4 +1,10 @@
 " Readable colorscheme
+"set background=dark
+if has('gui_running')
+  let g:solarized_termcolors=256
+else
+  let g:solarized_termcolors=16
+endif
 colorscheme solarized
 
 " Use Vim settings, rather than Vi settings (much better!).
@@ -126,6 +132,7 @@ let g:SimpylFold_fold_import = 0
 
 " Lightline
 set laststatus=2
+let g:lightline = {'colorscheme': 'solarized'}
 
 " NERDtree open with ctrl-o
 map <C-o> :NERDTreeToggle<CR>
