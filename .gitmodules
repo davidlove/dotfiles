@@ -43,3 +43,6 @@
 [submodule "solarized"]
 	path = solarized
 	url = https://github.com/altercation/solarized.git
+[submodule ".vim/pack/mypackages/start/indentpython"]
+	path = .vim/pack/mypackages/start/indentpython
+	url = https://github.com/vim-scripts/indentpython.vim.git
