@@ -115,7 +115,7 @@ git_prompt_string() {
   [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
 
-PROMPT="[%n@%m %{$fg_bold[blue]%}%*%{$reset_color%}]%# "
+PROMPT="[%{$fg[green]%}%n@%m %{$fg[cyan]%}%*%{$reset_color%}]%# "
 
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)[%{$fg_bold[red]%}%~%{$reset_color%}]'
