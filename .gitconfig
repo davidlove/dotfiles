@@ -1,0 +1,16 @@
+[user]
+	name = David Love
+	email = davidklove@pm.me
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[alias]
+	ci = clean -fdx
+	dt = difftool
+	g = log --graph --full-history --color --decorate --all
+	graph = log --graph --full-history --color --decorate --all
+
