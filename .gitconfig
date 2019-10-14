@@ -11,9 +11,11 @@
 [alias]
 	c = commit
 	ci = clean -fdx
+	co = checkout
 	d = diff
 	dt = difftool
 	f = fetch
 	g = log --graph --full-history --color --decorate --all
 	graph = log --graph --full-history --color --decorate --all
+	p = pull
 
