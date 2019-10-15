@@ -46,3 +46,6 @@
 [submodule ".vim/pack/mypackages/start/indentpython"]
 	path = .vim/pack/mypackages/start/indentpython
 	url = https://github.com/vim-scripts/indentpython.vim.git
+[submodule ".vim/pack/mypackages/start/javascript"]
+	path = .vim/pack/mypackages/start/javascript
+	url = https://github.com/pangloss/vim-javascript.git
