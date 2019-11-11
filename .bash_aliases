@@ -1,10 +1,22 @@
 # Bash aliases for David Love
 
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
 # General aliases
+case "${machine}" in
+    Linux)    alias ls='ls -F --color=always';;
+    Mac)      alias ls='ls -F';;
+esac
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='ls -F'
 alias la='ls -aF'
 alias ld='ls -dF'
 alias ll='ls -lhF'
