@@ -55,3 +55,12 @@
 [submodule ".vim/pack/mypackages/start/splitjoin"]
 	path = .vim/pack/mypackages/start/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
+[submodule ".vim/pack/mypackages/start/typescript"]
+	path = .vim/pack/mypackages/start/typescript
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule ".vim/pack/mypackages/start/tsx"]
+	path = .vim/pack/mypackages/start/tsx
+	url = https://github.com/ianks/vim-tsx.git
+[submodule ".vim/pack/mypackages/start/ale"]
+	path = .vim/pack/mypackages/start/ale
+	url = https://github.com/dense-analysis/ale.git
