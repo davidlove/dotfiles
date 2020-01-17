@@ -49,3 +49,9 @@
 [submodule ".vim/pack/mypackages/start/signify"]
 	path = .vim/pack/mypackages/start/signify
 	url = https://github.com/mhinz/vim-signify.git
+[submodule ".vim/pack/mypackages/start/gv"]
+	path = .vim/pack/mypackages/start/gv
+	url = https://github.com/junegunn/gv.vim.git
+[submodule ".vim/pack/mypackages/start/splitjoin"]
+	path = .vim/pack/mypackages/start/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
