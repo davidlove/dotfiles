@@ -7,9 +7,6 @@
 [submodule ".vim/pack/mypackages/start/trailing-whitespace"]
 	path = .vim/pack/mypackages/start/trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
-[submodule ".vim/pack/mypackages/start/gitgutter"]
-	path = .vim/pack/mypackages/start/gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
 [submodule ".vim/pack/mypackages/start/fugitive"]
 	path = .vim/pack/mypackages/start/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -49,3 +46,6 @@
 [submodule ".vim/pack/mypackages/start/javascript"]
 	path = .vim/pack/mypackages/start/javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule ".vim/pack/mypackages/start/signify"]
+	path = .vim/pack/mypackages/start/signify
+	url = https://github.com/mhinz/vim-signify.git
