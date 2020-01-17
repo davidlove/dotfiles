@@ -9,6 +9,7 @@
 [color]
 	ui = true
 [alias]
+	a = add
 	c = commit
 	ci = clean -fdx
 	co = checkout

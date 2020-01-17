@@ -30,7 +30,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias prog="ps aux | grep "
-alias grep='grep -Hn --color=auto'
+alias gr='grep -Hn --color=auto'
 alias g='git'
 
 # Compound clear and directory view commands
