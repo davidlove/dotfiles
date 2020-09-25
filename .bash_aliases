@@ -74,3 +74,9 @@ function jupyter-slides() { jupyter nbconvert "${1}" --to slides --post serve; r
 # Get real name of user
 function realname() { echo $(getent passwd $1 | cut -d: -f 5); }
 
+# Fixes pytest to run with pythonw
+if [ $machine == 'Mac' ]
+then
+    alias pytest='echo "* Using: $(which pythonw)"; pythonw -m pytest'
+fi
+
