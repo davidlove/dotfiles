@@ -111,6 +111,10 @@ if [ -f ~/.bash_spark ]; then
     . ~/.bash_spark
 fi
 
+if [ -e "$HOME/.extra_bashrc"  ]; then
+    source "$HOME/.extra_bashrc"
+fi
+
 export EDITOR=/usr/bin/vim
 
 # LS Colors on MAC
