@@ -40,7 +40,7 @@ autoload -U colors && colors
 
 setopt correct
 
-export EDITOR=/usr/bin/vim
+export EDITOR=$(which vim)
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
@@ -124,3 +124,13 @@ RPS1='$(git_prompt_string)[%{$fg_bold[red]%}%~%{$reset_color%}]'
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+# brew config
+if type brew &>/dev/null; then
+    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
