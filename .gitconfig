@@ -22,3 +22,5 @@
 	p = pull
 	s = status
 
+[pull]
+	rebase = true
