@@ -130,6 +130,9 @@ set foldlevel=0
 let g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_import = 0
 
+" Local leader to <space>
+let maplocalleader = " "
+
 " Lightline
 set laststatus=2
 let g:lightline = {'colorscheme': 'solarized'}

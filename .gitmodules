@@ -64,3 +64,6 @@
 [submodule ".vim/pack/mypackages/start/ale"]
 	path = .vim/pack/mypackages/start/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule ".vim/pack/mypackages/start/todo.txt"]
+	path = .vim/pack/mypackages/start/todo.txt
+	url = https://github.com/dbeniamine/todo.txt-vim.git
