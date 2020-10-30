@@ -46,6 +46,11 @@ alias 600='chmod 600'
 alias 400='chmod 400'
 alias 644='chmod 644'
 
+# Todo.sh
+alias t='todo.sh -t'
+alias ctl='clear; todo.sh ls'
+
+
 # Python aliases
 alias ipy='ipython'
 alias ipy2='ipython2'
