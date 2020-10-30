@@ -47,8 +47,9 @@ alias 400='chmod 400'
 alias 644='chmod 644'
 
 # Todo.sh
-alias t='todo.sh -t'
+alias t='todo.sh -at'
 alias ctl='clear; todo.sh ls'
+alias vt='vim ${HOME}/todo/todo.txt'
 
 
 # Python aliases

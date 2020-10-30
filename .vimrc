@@ -131,7 +131,13 @@ let g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_import = 0
 
 " Local leader to <space>
-let maplocalleader = " "
+let maplocalleader = "\<Space>"
+
+" Todo.txt
+" Use todo#Complete as the omni complete function for todo files
+au filetype todo setlocal omnifunc=todo#Complete
+au filetype todo imap <buffer> + +<C-X><C-O><C-P>
+au filetype todo imap <buffer> @ @<C-X><C-O><C-P>
 
 " Lightline
 set laststatus=2
