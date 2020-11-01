@@ -23,9 +23,22 @@ else
 endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
-set number		" show line numbers
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+
+" Fancy relative numbering from https://jeffkreeftmeijer.com/vim-number/
+set number relativenumber
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 let &guioptions = substitute(&guioptions, "t", "", "g")
