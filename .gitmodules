@@ -67,3 +67,6 @@
 [submodule ".vim/pack/mypackages/start/todo.txt"]
 	path = .vim/pack/mypackages/start/todo.txt
 	url = https://github.com/dbeniamine/todo.txt-vim.git
+[submodule ".vim/pack/mypackages/start/https:/github.com/vifm/vifm"]
+	path = .vim/pack/mypackages/start/https:/github.com/vifm/vifm
+	url = https://github.com/vifm/vifm.vim
