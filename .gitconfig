@@ -15,7 +15,7 @@
 	ui = true
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [merge]
 	tool = vimdiff
 [pull]
