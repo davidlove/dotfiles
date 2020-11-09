@@ -173,5 +173,5 @@ nnoremap <C-u> viwU
 inoremap <C-u> <Esc>viwUea
 
 " Edit vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ve :vsplit $MYVIMRC<CR>
+nnoremap <leader>vs :source $MYVIMRC<CR>
