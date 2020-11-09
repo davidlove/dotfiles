@@ -151,6 +151,8 @@ endif
 au filetype todo setlocal omnifunc=todo#Complete
 au filetype todo imap <buffer> + +<C-X><C-O><C-P>
 au filetype todo imap <buffer> @ @<C-X><C-O><C-P>
+let g:Todo_txt_prefix_creation_date=1
+
 
 " Lightline
 set laststatus=2
