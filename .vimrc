@@ -64,35 +64,29 @@ if &t_Co > 2 || has("gui_running")
     set hlsearch
 endif
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-    " Enable file type detection.
-    " Use the default filetype settings, so that mail gets 'tw' set to 72,
-    " 'cindent' is on in C files, etc.
-    " Also load indent files, to automatically do language-dependent indenting.
-    filetype plugin indent on
+" Enable file type detection.
+" Use the default filetype settings, so that mail gets 'tw' set to 72,
+" 'cindent' is on in C files, etc.
+" Also load indent files, to automatically do language-dependent indenting.
+filetype plugin indent on
 
-    " Put these in an autocmd group, so that we can delete them easily.
-    augroup vimrcEx
-        au!
+" Put these in an autocmd group, so that we can delete them easily.
+augroup vimrcEx
+    autocmd!
 
-        " For all text files set 'textwidth' to 78 characters.
-        autocmd FileType text setlocal textwidth=78
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
 
-        " When editing a file, always jump to the last known cursor position.
-        " Don't do it when the position is invalid or when inside an event handler
-        " (happens when dropping a file on gvim).
-        " Also don't do it when the mark is in the first line, that is the default
-        " position when opening a file.
-        autocmd BufReadPost *
-            \ if line("'\"") > 1 && line("'\"") <= line("$") |
-            \   exe "normal! g`\"" |
-            \ endif
-    augroup END
-else
-    set autoindent  " always set autoindenting on
-    set smartindent
-endif " has("autocmd")
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    " Also don't do it when the mark is in the first line, that is the default
+    " position when opening a file.
+    autocmd BufReadPost *
+        \ if line("'\"") > 1 && line("'\"") <= line("$") |
+        \   exe "normal! g`\"" |
+        \ endif
+augroup end
 
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
@@ -104,12 +98,13 @@ set expandtab       " Expand TABs to spaces
 set smarttab        " Delete spaces as tabs at line beginning
 set shiftround      " Round to indent when using < or >
 
-"Don't expand tabs for .sas, .sql
-if has("autocmd")
+"Don't expand tabs for .sas, .sql, or makefile
+augroup keepTabs
+    autocmd!
     autocmd FileType sas setlocal noexpandtab
     autocmd FileType sql setlocal noexpandtab
     autocmd FileType make setlocal noexpandtab
-endif
+augroup end
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -148,9 +143,12 @@ endif
 
 " Todo.txt
 " Use todo#Complete as the omni complete function for todo files
-au filetype todo setlocal omnifunc=todo#Complete
-au filetype todo imap <buffer> + +<C-X><C-O><C-P>
-au filetype todo imap <buffer> @ @<C-X><C-O><C-P>
+augroup todoMods
+    autocmd!
+    au filetype todo setlocal omnifunc=todo#Complete
+    au filetype todo imap <buffer> + +<C-X><C-O><C-P>
+    au filetype todo imap <buffer> @ @<C-X><C-O><C-P>
+augroup end
 let g:Todo_txt_prefix_creation_date=1
 
 
