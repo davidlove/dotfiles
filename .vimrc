@@ -145,6 +145,7 @@ endif
 " Use todo#Complete as the omni complete function for todo files
 augroup todoMods
     autocmd!
+    autocmd BufNewFile,BufRead [Tt]odo_*.txt set filetype=todo
     au filetype todo setlocal omnifunc=todo#Complete
     au filetype todo imap <buffer> + +<C-X><C-O><C-P>
     au filetype todo imap <buffer> @ @<C-X><C-O><C-P>
