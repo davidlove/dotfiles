@@ -58,12 +58,12 @@ autoload -U colors && colors # Enable colors in prompt
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}"
 GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
+GIT_PROMPT_AHEAD="%{$fg[magenta]%}ANUM%{$reset_color%}"
 GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
 GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}Merging%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}U%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}M%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg_bold[green]%}S%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}Un%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}Mo%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg_bold[green]%}St%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
 parse_git_branch() {
