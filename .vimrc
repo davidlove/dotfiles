@@ -3,13 +3,7 @@
 set nocompatible
 
 " Readable colorscheme
-"set background=dark
-if has('gui_running')
-    let g:solarized_termcolors=256
-else
-    let g:solarized_termcolors=16
-endif
-colorscheme solarized
+colorscheme nord
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -88,6 +82,16 @@ augroup vimrcEx
         \ endif
 augroup end
 
+" Spelling {{{
+augroup spell
+    autocmd FileType text,markdown setlocal spell spelllang=en_us
+    hi clear SpellBad
+    hi SpellBad cterm=underline
+    hi SpellBad gui=undercurl
+augroup end " spell
+" }}}
+
+" Tabs {{{
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
@@ -98,23 +102,22 @@ set expandtab       " Expand TABs to spaces
 set smarttab        " Delete spaces as tabs at line beginning
 set shiftround      " Round to indent when using < or >
 
-"Don't expand tabs for .sas, .sql, or makefile
 augroup keepTabs
     autocmd!
     autocmd FileType sas setlocal noexpandtab
     autocmd FileType sql setlocal noexpandtab
     autocmd FileType make setlocal noexpandtab
 augroup end
+" }}}
 
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-if !exists(":DiffOrig")
-    command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-            \ | wincmd p | diffthis
-endif
+" VIM file settings {{{
+augroup vimrc
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup end
+" }}}
 
-" Set up font size
+" Set up font size {{{
 if has("gui_running")
     if has("gui_gtk2")
         set guifont=Inconsolata\ 12
@@ -124,24 +127,26 @@ if has("gui_running")
         set guifont=Consolas:h12:cANSI
     endif
 endif
+" }}}
 
 " Set F4 to toggle paste mode
 set pastetoggle=<F4>
 
-" Folding
+" Folding {{{
 set foldmethod=syntax
 set foldnestmax=10
 set foldenable
 set foldlevel=0
 let g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_import = 0
+" }}}
 
 " Pathogen (for VIM < 8.0)
 if version < 800
     execute pathogen#infect()
 endif
 
-" Todo.txt
+" Todo.txt {{{
 " Use todo#Complete as the omni complete function for todo files
 augroup todoMods
     autocmd!
@@ -151,17 +156,20 @@ augroup todoMods
     au filetype todo imap <buffer> @ @<C-X><C-O><C-P>
 augroup end
 let g:Todo_txt_prefix_creation_date=1
+" }}}
 
 
-" Lightline
+" Lightline {{{
 set laststatus=2
 let g:lightline = {'colorscheme': 'solarized'}
+" }}}
 
-" NERDtree open with ctrl-o
+" NERDtree {{{
+" open with ctrl-o
 map <C-o> :NERDTreeToggle<CR>
+" }}}
 
-"""""""""""""""""""""""""""""""""""""""""
-" Learn VIMscript the Hard Way commands "
+" Learn VIMscript the Hard Way commands {{{"
 """""""""""""""""""""""""""""""""""""""""
 " Move lines up or down by one
 nnoremap <leader>- ddp
@@ -174,3 +182,5 @@ inoremap <C-u> <Esc>viwUea
 " Edit vimrc
 nnoremap <leader>ve :vsplit $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
+
+" }}}
