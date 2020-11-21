@@ -1,9 +1,6 @@
 [submodule ".vim/pack/mypackages/start/SimpylFold"]
 	path = .vim/pack/mypackages/start/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
-[submodule ".vim/pack/mypackages/start/lightline"]
-	path = .vim/pack/mypackages/start/lightline
-	url = https://github.com/itchyny/lightline.vim.git
 [submodule ".vim/pack/mypackages/start/trailing-whitespace"]
 	path = .vim/pack/mypackages/start/trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
