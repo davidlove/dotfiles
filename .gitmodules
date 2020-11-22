@@ -70,3 +70,9 @@
 [submodule ".vim/pack/mypackages/start/nord"]
 	path = .vim/pack/mypackages/start/nord
 	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule ".vim/pack/mypackages/start/dracula"]
+	path = .vim/pack/mypackages/start/dracula
+	url = https://github.com/dracula/vim.git
+[submodule ".vim/pack/mypackages/start/gruvbox"]
+	path = .vim/pack/mypackages/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
