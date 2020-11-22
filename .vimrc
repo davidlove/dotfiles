@@ -186,21 +186,43 @@ nnoremap <leader>vs :source $MYVIMRC<CR>
 " }}}
 
 " statusline {{{
-set statusline=
-set statusline+=%#PmenuThumb#
-set statusline+=%{FugitiveStatusline()}\  "Git branch
-set statusline+=%#PmenuSel#
-set statusline+=%.30f    " File path
-set statusline+=%m       " Modified flag
-set statusline+=%r       " Read-only flag
-set statusline+=%#StatusLineNC#
-set statusline+=%=       " Switch to right side
-set statusline+=%#PmenuSel#
-set statusline+=%y\      " Filetype
-set statusline+=%{&fileformat}\  " Line endings file format
-set statusline+=\|\  " Line endings file format
-set statusline+=%{&fileencoding?&fileencoding:&encoding}\  " File encoding
-set statusline+=%#PmenuThumb#
-set statusline+=%4l:%-2c\ /\ %-4L\  " Line and column number, total lines
-set statusline+=%p%%     " Percentage through file
+function SetFocusedStatusLine()
+    setlocal statusline=
+    setlocal statusline+=%#PmenuThumb#
+    setlocal statusline+=%{FugitiveStatusline()}\  "Git branch
+    setlocal statusline+=%#PmenuSel#
+    setlocal statusline+=%.30f    " File path
+    setlocal statusline+=%m       " Modified flag
+    setlocal statusline+=%r       " Read-only flag
+    setlocal statusline+=%#StatusLineNC#
+    setlocal statusline+=%=       " Switch to right side
+    setlocal statusline+=%#PmenuSel#
+    setlocal statusline+=%y\      " Filetype
+    setlocal statusline+=%{&fileformat}\  " Line endings file format
+    setlocal statusline+=\|\  " Line endings file format
+    setlocal statusline+=%{&fileencoding?&fileencoding:&encoding}\  " File encoding
+    setlocal statusline+=%#PmenuThumb#
+    setlocal statusline+=%4l:%-2c\ /\ %-4L\  " Line and column number, total lines
+    setlocal statusline+=%p%%     " Percentage through file
+endfunction
+function SetUnFocusedStatusLine()
+    setlocal statusline=
+    setlocal statusline+=%#LineNr#
+    setlocal statusline+=%{FugitiveStatusline()}\  "Git branch
+    setlocal statusline+=%.30f    " File path
+    setlocal statusline+=%m       " Modified flag
+    setlocal statusline+=%r       " Read-only flag
+    setlocal statusline+=%=       " Switch to right side
+    setlocal statusline+=%y\      " Filetype
+    setlocal statusline+=%{&fileformat}\  " Line endings file format
+    setlocal statusline+=\|\  " Line endings file format
+    setlocal statusline+=%{&fileencoding?&fileencoding:&encoding}\  " File encoding
+    setlocal statusline+=%4l:%-2c\ /\ %-4L\  " Line and column number, total lines
+    setlocal statusline+=%p%%     " Percentage through file
+endfunction
+augroup statuslinetoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * call SetFocusedStatusLine()
+    autocmd BufLeave,FocusLost,InsertEnter   * call SetUnFocusedStatusLine()
+augroup END
 " }}}
