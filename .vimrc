@@ -3,7 +3,8 @@
 set nocompatible
 
 " Readable colorscheme
-colorscheme nord
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -39,6 +40,8 @@ augroup END
 " search will center on the line it's found in.
 nnoremap n nzzzv
 nnoremap N Nzzzv
+" Allows to search by visual selection with //
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
