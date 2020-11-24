@@ -2,9 +2,15 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Pathogen (for VIM < 8.0)
+if version < 800
+    execute pathogen#infect()
+endif
+
 " Readable colorscheme
-colorscheme gruvbox
+set bg=dark
 let g:gruvbox_contrast_dark = "hard"
+colorscheme gruvbox
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -143,11 +149,6 @@ set foldlevel=0
 let g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_import = 0
 " }}}
-
-" Pathogen (for VIM < 8.0)
-if version < 800
-    execute pathogen#infect()
-endif
 
 " Todo.txt {{{
 " Use todo#Complete as the omni complete function for todo files
