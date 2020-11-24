@@ -161,7 +161,6 @@ augroup end
 let g:Todo_txt_prefix_creation_date=1
 " }}}
 
-
 " Lightline {{{
 set laststatus=2
 let g:lightline = {'colorscheme': 'solarized'}
@@ -191,22 +190,22 @@ nnoremap <leader>vs :source $MYVIMRC<CR>
 " statusline {{{
 function SetFocusedStatusLine()
     setlocal statusline=
-    setlocal statusline+=%#PmenuThumb#
-    setlocal statusline+=%{FugitiveStatusline()}\  "Git branch
     setlocal statusline+=%#PmenuSel#
+    setlocal statusline+=%{FugitiveStatusline()}\  "Git branch
+    setlocal statusline+=%#PmenuThumb#
     setlocal statusline+=%.30f    " File path
     setlocal statusline+=%m       " Modified flag
     setlocal statusline+=%r       " Read-only flag
     setlocal statusline+=%#StatusLineNC#
     setlocal statusline+=%=       " Switch to right side
-    setlocal statusline+=%#PmenuSel#
+    setlocal statusline+=%#PmenuThumb#
     setlocal statusline+=%y\      " Filetype
     setlocal statusline+=%{&fileformat}\  " Line endings file format
     setlocal statusline+=\|\  " Line endings file format
     setlocal statusline+=%{&fileencoding?&fileencoding:&encoding}\  " File encoding
-    setlocal statusline+=%#PmenuThumb#
-    setlocal statusline+=%4l:%-2c\ /\ %-4L\  " Line and column number, total lines
-    setlocal statusline+=%p%%     " Percentage through file
+    setlocal statusline+=%#PmenuSel#
+    setlocal statusline+=%p%%\    " Percentage through file
+    setlocal statusline+=%4l/%L\ \|\ %-2c  " Line and column number, total lines
 endfunction
 function SetUnFocusedStatusLine()
     setlocal statusline=
@@ -220,12 +219,12 @@ function SetUnFocusedStatusLine()
     setlocal statusline+=%{&fileformat}\  " Line endings file format
     setlocal statusline+=\|\  " Line endings file format
     setlocal statusline+=%{&fileencoding?&fileencoding:&encoding}\  " File encoding
-    setlocal statusline+=%4l:%-2c\ /\ %-4L\  " Line and column number, total lines
-    setlocal statusline+=%p%%     " Percentage through file
+    setlocal statusline+=%p%%\    " Percentage through file
+    setlocal statusline+=%4l/%L\ \|\ %-2c  " Line and column number, total lines
 endfunction
 augroup statuslinetoggle
     autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * call SetFocusedStatusLine()
-    autocmd BufLeave,FocusLost,InsertEnter   * call SetUnFocusedStatusLine()
+    autocmd BufEnter,FocusGained * call SetFocusedStatusLine()
+    autocmd BufLeave,FocusLost   * call SetUnFocusedStatusLine()
 augroup END
 " }}}
