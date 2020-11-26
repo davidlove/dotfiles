@@ -148,6 +148,12 @@ set foldenable
 set foldlevel=0
 let g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_import = 0
+
+augroup XML
+    autocmd!
+    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+augroup END
+
 " }}}
 
 " Todo.txt {{{
