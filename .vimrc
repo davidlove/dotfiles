@@ -168,11 +168,6 @@ augroup end
 let g:Todo_txt_prefix_creation_date=1
 " }}}
 
-" Lightline {{{
-set laststatus=2
-let g:lightline = {'colorscheme': 'solarized'}
-" }}}
-
 " NERDtree {{{
 " open with ctrl-o
 map <C-o> :NERDTreeToggle<CR>
