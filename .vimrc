@@ -224,6 +224,9 @@ function SetUnFocusedStatusLine()
     setlocal statusline+=%p%%\    " Percentage through file
     setlocal statusline+=%4l/%L\ \|\ %-2c  " Line and column number, total lines
 endfunction
+
+set laststatus=2
+
 augroup statuslinetoggle
     autocmd!
     autocmd BufEnter,FocusGained * call SetFocusedStatusLine()
