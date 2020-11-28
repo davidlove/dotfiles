@@ -25,54 +25,24 @@
 [submodule ".vim/pack/mypackages/start/FastFold"]
 	path = .vim/pack/mypackages/start/FastFold
 	url = https://github.com/Konfekt/FastFold.git
-[submodule ".vim/pack/mypackages/start/vue"]
-	path = .vim/pack/mypackages/start/vue
-	url = https://github.com/posva/vim-vue.git
 [submodule ".vim/pack/mypackages/start/repeat"]
 	path = .vim/pack/mypackages/start/repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule ".vim/pack/mypackages/start/colors-solarized"]
-	path = .vim/pack/mypackages/start/colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "solarized"]
-	path = solarized
-	url = https://github.com/altercation/solarized.git
 [submodule ".vim/pack/mypackages/start/indentpython"]
 	path = .vim/pack/mypackages/start/indentpython
 	url = https://github.com/vim-scripts/indentpython.vim.git
-[submodule ".vim/pack/mypackages/start/javascript"]
-	path = .vim/pack/mypackages/start/javascript
-	url = https://github.com/pangloss/vim-javascript.git
 [submodule ".vim/pack/mypackages/start/signify"]
 	path = .vim/pack/mypackages/start/signify
 	url = https://github.com/mhinz/vim-signify.git
-[submodule ".vim/pack/mypackages/start/gv"]
-	path = .vim/pack/mypackages/start/gv
-	url = https://github.com/junegunn/gv.vim.git
 [submodule ".vim/pack/mypackages/start/splitjoin"]
 	path = .vim/pack/mypackages/start/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
-[submodule ".vim/pack/mypackages/start/typescript"]
-	path = .vim/pack/mypackages/start/typescript
-	url = https://github.com/leafgarland/typescript-vim.git
-[submodule ".vim/pack/mypackages/start/tsx"]
-	path = .vim/pack/mypackages/start/tsx
-	url = https://github.com/ianks/vim-tsx.git
 [submodule ".vim/pack/mypackages/start/ale"]
 	path = .vim/pack/mypackages/start/ale
 	url = https://github.com/dense-analysis/ale.git
 [submodule ".vim/pack/mypackages/start/todo.txt"]
 	path = .vim/pack/mypackages/start/todo.txt
 	url = https://github.com/dbeniamine/todo.txt-vim.git
-[submodule ".vim/pack/mypackages/start/https:/github.com/vifm/vifm"]
-	path = .vim/pack/mypackages/start/https:/github.com/vifm/vifm
-	url = https://github.com/vifm/vifm.vim
-[submodule ".vim/pack/mypackages/start/nord"]
-	path = .vim/pack/mypackages/start/nord
-	url = https://github.com/arcticicestudio/nord-vim.git
-[submodule ".vim/pack/mypackages/start/dracula"]
-	path = .vim/pack/mypackages/start/dracula
-	url = https://github.com/dracula/vim.git
 [submodule ".vim/pack/mypackages/start/gruvbox"]
 	path = .vim/pack/mypackages/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
