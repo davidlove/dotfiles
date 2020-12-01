@@ -142,6 +142,10 @@ if type brew &>/dev/null; then
     compinit
 fi
 
+# Conda zsh completion
+fpath+=$(dirname $(readlink $HOME/.zshrc))/conda-zsh-completion
+compinit conda
+
 if [ -e "$HOME/.extra_zshrc"  ]; then
     source "$HOME/.extra_zshrc"
 fi
