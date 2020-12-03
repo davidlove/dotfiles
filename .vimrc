@@ -15,7 +15,7 @@ colorscheme gruvbox
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Local leader to <space>
+" Leader and local leader
 let mapleader="\<Space>"
 let maplocalleader=','
 
@@ -26,12 +26,17 @@ set backupdir^=$HOME/tmp,$TEMP " Save backups to temporary directory
 
 set history=50  " keep 50 lines of command line history
 set ruler       " show the cursor position all the time
+set cursorline  " Show the line of the cursor
 set showcmd     " display incomplete commands
 set incsearch   " do incremental searching
 
-" Use jk to get out of insert mode
+" Use jk to get out of insert, visual, command
 inoremap jk <Esc>
 inoremap <Esc> <nop>
+vnoremap jk <Esc>
+vnoremap <Esc> <nop>
+cnoremap jk <C-c>
+cnoremap <Esc> <nop>
 
 " Fancy relative numbering from https://jeffkreeftmeijer.com/vim-number/
 set number relativenumber
