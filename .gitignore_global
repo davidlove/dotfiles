@@ -4,6 +4,9 @@
 .cache
 *.log
 *.swp
+*.bak
+*.back
+*.BAK
 
 # Data files
 *.csv
