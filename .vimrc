@@ -119,13 +119,6 @@ augroup keepTabs
 augroup end
 " }}}
 
-" VIM file settings {{{
-augroup vimrc
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup end
-" }}}
-
 " Set up font size {{{
 if has("gui_running")
     if has("gui_gtk2")
@@ -154,6 +147,20 @@ augroup XML
     autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
 augroup END
 
+" }}}
+
+" VIM file settings {{{
+augroup vimrc
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup end
+" }}}
+
+" Git commit file settings {{{
+augroup gitcommit
+    autocmd!
+    autocmd FileType gitcommit setlocal nofoldenable
+augroup END
 " }}}
 
 " Todo.txt {{{
