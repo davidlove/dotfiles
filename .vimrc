@@ -103,6 +103,8 @@ augroup leavepaste
     autocmd InsertLeave * set nopaste
     nnoremap <Leader>i :set paste<CR>i
     nnoremap <Leader>I :set paste<CR>I
+    nnoremap <Leader>a :set paste<CR>a
+    nnoremap <Leader>A :set paste<CR>A
     nnoremap <Leader>o :set paste<CR>o
     nnoremap <Leader>O :set paste<CR>O
 augroup end
