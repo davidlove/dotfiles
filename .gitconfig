@@ -10,6 +10,7 @@
 	g = log --graph --full-history --color --decorate --all
 	graph = log --graph --full-history --color --decorate --all
 	p = pull
+	r = rebase
 	s = status
 [color]
 	ui = true
