@@ -107,6 +107,12 @@ augroup leavepaste
     nnoremap <Leader>A :set paste<CR>A
     nnoremap <Leader>o :set paste<CR>o
     nnoremap <Leader>O :set paste<CR>O
+    nnoremap <Leader>c :set paste<CR>c
+    nnoremap <Leader>C :set paste<CR>C
+    nnoremap <Leader>r :set paste<CR>r
+    nnoremap <Leader>R :set paste<CR>R
+    nnoremap <Leader>s :set paste<CR>s
+    nnoremap <Leader>S :set paste<CR>S
 augroup end
 " }}}
 
