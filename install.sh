@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Install links to the dotfiles directory for all tracked files
+
 for x in .*; do
     if [ $x = '.' ] \
     || [ $x = '..' ] \
@@ -10,11 +12,28 @@ for x in .*; do
     ; then
         continue
     fi
-    if [ ! -e $HOME/$x ] ; then
-        cmd="ln -s $PWD/$x $HOME/$x"
-        echo "$cmd"
+    SOURCE=$PWD/$x
+    DEST=$HOME/$x
+    if [ ! -e $DEST ] ; then
+        cmd="ln -s $SOURCE $DEST"
+        echo "$SOURCE -> $DEST"
         eval "$cmd"
+    elif [ -L $DEST ] && [ "$(realpath $SOURCE)" == "$(readlink $DEST)" ] ; then
+        echo "$SOURCE -> $DEST"
     else
-        echo "$PWD/$x already exists"
+        echo "* $DEST already exists"
+    fi
+done
+for x in config/*; do
+    SOURCE=$PWD/$x
+    DEST=$HOME/.$x
+    if [ ! -e $DEST ] ; then
+        cmd="ln -s $SOURCE $DEST"
+        echo "$SOURCE -> $DEST"
+        eval "$cmd"
+    elif [ -L $DEST ] && [ "$(realpath $SOURCE)" == "$(readlink $DEST)" ] ; then
+        echo "$SOURCE -> $DEST"
+    else
+        echo "* $DEST already exists"
     fi
 done
