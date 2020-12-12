@@ -32,11 +32,11 @@ set incsearch   " do incremental searching
 
 " Use jk to get out of insert, visual, command
 inoremap jk <Esc>
-inoremap <Esc> <nop>
+" inoremap <Esc> <nop>
 vnoremap jk <Esc>
-vnoremap <Esc> <nop>
+" vnoremap <Esc> <nop>
 cnoremap jk <C-c>
-cnoremap <Esc> <nop>
+" cnoremap <Esc> <nop>
 
 " Fancy relative numbering from https://jeffkreeftmeijer.com/vim-number/
 set number relativenumber
