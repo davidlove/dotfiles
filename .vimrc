@@ -33,7 +33,7 @@ set incsearch   " do incremental searching
 " Use jk to get out of insert, visual, command
 inoremap jk <Esc>
 " inoremap <Esc> <nop>
-vnoremap jk <Esc>
+" vnoremap jk <Esc>
 " vnoremap <Esc> <nop>
 cnoremap jk <C-c>
 " cnoremap <Esc> <nop>
