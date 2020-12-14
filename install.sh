@@ -14,40 +14,40 @@ for x in .*; do
     fi
     SOURCE=$PWD/$x
     DEST=$HOME/$x
-    if [[ -e $DEST && ! -L $DEST ]] || \
-       [[ ! -L $DEST && "$(realpath $SOURCE)" != "$(readlink $DEST)" ]] ; then
-        read -p "$DEST already exists, delete it? y/[n] > " RESPONSE
-        if [ "$RESPONSE" == "y" ]; then
-            rm -f $DEST
-        else
+    if [ -e $DEST ] ; then
+        if [ -L $DEST ] && [ "$(realpath $SOURCE)" == "$(readlink $DEST)" ] ; then
+            echo "${SOURCE} already installed"
             continue
+        else
+            read -p "$DEST already exists, delete it? y/[n] > " RESPONSE
+            if [ "$RESPONSE" == "y" ]; then
+                rm -rf $DEST
+            else
+                continue
+            fi
         fi
     fi
-    if [ -L $DEST ] && [ "$(realpath $SOURCE)" == "$(readlink $DEST)" ] ; then
-        echo "$SOURCE -> $DEST"
-    else
-        cmd="ln -s $SOURCE $DEST"
-        echo "$SOURCE -> $DEST"
-        eval "$cmd"
-    fi
+    cmd="ln -s $SOURCE $DEST"
+    echo "Installing link: $SOURCE -> $DEST"
+    eval "$cmd"
 done
 for x in config/*; do
     SOURCE=$PWD/$x
     DEST=$HOME/.$x
-    if [[ -e $DEST && ! -L $DEST ]] || \
-       [[ ! -L $DEST && "$(realpath $SOURCE)" != "$(readlink $DEST)" ]] ; then
-        read -p "$DEST already exists, delete it? y/[n] > " RESPONSE
-        if [ "$RESPONSE" == "y" ]; then
-            rm -f $DEST
-        else
+    if [ -e $DEST ] ; then
+        if [ -L $DEST ] && [ "$(realpath $SOURCE)" == "$(readlink $DEST)" ] ; then
+            echo "${SOURCE} already installed"
             continue
+        else
+            read -p "$DEST already exists, delete it? y/[n] > " RESPONSE
+            if [ "$RESPONSE" == "y" ]; then
+                rm -rf $DEST
+            else
+                continue
+            fi
         fi
     fi
-    if [ -L $DEST ] && [ "$(realpath $SOURCE)" == "$(readlink $DEST)" ] ; then
-        echo "$SOURCE -> $DEST"
-    else
-        cmd="ln -s $SOURCE $DEST"
-        echo "$SOURCE -> $DEST"
-        eval "$cmd"
-    fi
+    cmd="ln -s $SOURCE $DEST"
+    echo "Installing link: $SOURCE -> $DEST"
+    eval "$cmd"
 done
