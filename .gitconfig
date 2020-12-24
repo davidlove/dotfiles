@@ -24,3 +24,5 @@
 [user]
 	name = David Love
 	email = davidklove@pm.me
+[include]
+    path = ~/.extra_gitconfig
