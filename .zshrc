@@ -156,6 +156,11 @@ fi
 fpath+=$(dirname $(readlink $HOME/.zshrc))/conda-zsh-completion
 compinit conda
 
+# direnv config
+if [ -x "$(command -v direnv)" ]; then
+    eval "$(direnv hook zsh)"
+fi
+
 if [ -e "$HOME/.extra_zshrc"  ]; then
     source "$HOME/.extra_zshrc"
 fi
