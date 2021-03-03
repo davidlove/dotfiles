@@ -7,8 +7,8 @@
 	dc = diff --cached
 	dt = difftool
 	f = fetch
-	g = log --graph --full-history --color --decorate --all
-	graph = log --graph --full-history --color --decorate --all
+    g = log --graph --full-history --color --decorate --all --abbrev-commit --abbrev=6
+    graph = log --graph --full-history --color --decorate --all --abbrev-commit --abbrev=6
 	p = pull
 	r = rebase
 	s = status
@@ -23,6 +23,5 @@
 	rebase = true
 [user]
 	name = David Love
-	email = davidklove@pm.me
 [include]
     path = ~/.extra_gitconfig
