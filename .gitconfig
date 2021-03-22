@@ -25,3 +25,5 @@
 	name = David Love
 [include]
     path = ~/.extra_gitconfig
+[init]
+	defaultBranch = main
