@@ -161,6 +161,11 @@ if [ -x "$(command -v direnv)" ]; then
     eval "$(direnv hook zsh)"
 fi
 
+# pyenv config
+if [ -x "$(command -v pyenv)" ]; then
+    eval "$(pyenv init -)"
+fi
+
 if [ -e "$HOME/.extra_zshrc"  ]; then
     source "$HOME/.extra_zshrc"
 fi
