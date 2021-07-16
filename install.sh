@@ -34,16 +34,16 @@ for x in "$DIR"/.* "$DIR"/config/*; do
                 continue
             fi
         fi
-        if [ "$1" == "-d" ]; then
-            RESPONSE="d"
+        if [ "$1" == "-r" ]; then
+            RESPONSE="r"
         elif [ "$1" == '-b' ]; then
             RESPONSE="b"
-        elif [ "$1" == '-n' ]; then
-            RESPONSE="n"
+        elif [ "$1" == '-s' ]; then
+            RESPONSE="s"
         else
-            read -p "'$DEST' already exists, [d]elete it, [b]ackup, or [n]o change (default) > " RESPONSE
+            read -p "'$DEST' already exists, [r]eplace it, [b]ackup then replace, or [s]kip it (default) > " RESPONSE
         fi
-        if [ "$RESPONSE" == "d" ]; then
+        if [ "$RESPONSE" == "r" ]; then
             CMD="rm -rf '$DEST'"
             echo "$CMD"
             eval "$CMD"
