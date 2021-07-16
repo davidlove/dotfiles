@@ -47,7 +47,7 @@ defscrollback 30000
 
 
 # change command character from ctrl-a to ctrl-b (emacs users may want this)
-escape ^Bb
+#escape ^Bb
 # all termcap entries are now duplicated as terminfo entries.
 # only difference should be the slightly modified syntax, and check for
 # terminfo entries, that are already corected in the database.
