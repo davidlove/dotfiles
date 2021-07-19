@@ -131,4 +131,5 @@ terminfo wy75-42 nx:xo:Z0=\E[?3h\E[31h:Z1=\E[?3l\E[31h
 # Enable mouse wheel scrolling
 # https://stackoverflow.com/questions/359109/using-the-scrollwheel-in-gnu-screen
 termcapinfo xterm* ti@:te@
+termcapinfo alacritty ti@:te@
 
