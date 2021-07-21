@@ -210,6 +210,17 @@ augroup end
 let g:Todo_txt_prefix_creation_date=1
 " }}}
 
+" YAML {{{
+augroup yamlfile
+    autocmd!
+    au filetype yaml setlocal foldmethod=indent
+    au filetype yaml setlocal foldignore=#
+    au filetype yaml setlocal shiftwidth=2
+    au filetype yaml setlocal tabstop=2
+    au filetype yaml setlocal softtabstop=2
+augroup end
+" }}}
+
 " NERDtree {{{
 " open with ctrl-o
 map <C-o> :NERDTreeToggle<CR>
