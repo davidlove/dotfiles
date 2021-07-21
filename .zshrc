@@ -152,9 +152,9 @@ if type brew &>/dev/null; then
     compinit
 fi
 
-# Conda zsh completion
-fpath+=$(dirname $(readlink $HOME/.zshrc))/conda-zsh-completion
-compinit conda
+## Conda zsh completion
+#fpath+=$(dirname $(readlink $HOME/.zshrc))/conda-zsh-completion
+#compinit conda
 
 # direnv config
 if [ -x "$(command -v direnv)" ]; then
