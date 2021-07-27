@@ -64,6 +64,7 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
+    set ttymouse=xterm2
     set mouse=a
 endif
 
