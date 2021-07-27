@@ -53,6 +53,8 @@ alias t='todo.sh -at'
 alias ctl='clear; todo.sh ls'
 alias vt='vim ${HOME}/todo/todo.txt'
 
+# TMUX
+alias ta='tmux attach'
 
 # Python aliases
 alias ipy='ipython'

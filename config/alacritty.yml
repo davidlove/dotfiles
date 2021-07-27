@@ -15,8 +15,8 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-env:
-  TERM: alacritty
+#env:
+  #TERM: alacritty
   #TERM: xterm-256color
   # TERM variable
   #
