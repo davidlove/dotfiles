@@ -169,6 +169,15 @@ if [ -x "$(command -v pyenv)" ]; then
     eval "$(pyenv init -)"
 fi
 
+# Choosing a pager
+if [ -x "$(command -v most)" ]; then
+    export PAGER='most'
+elif [ -x "$(command -v less)" ]; then
+    export PAGER='less'
+else
+    export PAGER='more'
+fi
+
 if [ -e "$HOME/.extra_zshrc"  ]; then
     source "$HOME/.extra_zshrc"
 fi
