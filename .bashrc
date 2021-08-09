@@ -123,3 +123,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 export PATH=$PATH:$HOME/texlive/2017/bin/x86_64-darwin
 export SPARK_HOME=/usr/local/Cellar/apache-spark/2.4.3/libexec
+
+COLOR='\[\e[34;1m\]' # light blue
+ML="$(hostname -s)"
+STOPCOLOR='\[\e[0m\]'
+export PS1="[\u@${ML} ${COLOR}\w${STOPCOLOR}]\$ "

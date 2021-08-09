@@ -75,18 +75,6 @@ alias nb='jupyter notebook --no-browser'
 alias jl='jupyter lab --no-browser'
 alias ca='conda activate'
 
-COLOR='\[\e[34;1m\]' # light blue
-ML="$(hostname -s)"
-STOPCOLOR='\[\e[0m\]'
-export PS1="[\u@${ML} ${COLOR}\w${STOPCOLOR}]\$ "
-
-# Kill YARN Job
-alias ykill="yarn application -kill"
-
-# To change the paths dynamicall
-alias epp="source $HOME/bin/epp_code"
-alias bpp="source $HOME/bin/bpp_code"
-
 # Build jupyter slides
 function jupyter-slides() { jupyter nbconvert "${1}" --to slides --post serve; rm -f $(basename "${1}" .ipynb).slides.html ; }
 
