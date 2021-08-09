@@ -54,7 +54,19 @@ alias ctl='clear; todo.sh ls'
 alias vt='vim ${HOME}/todo/todo.txt'
 
 # TMUX
-alias ta='tmux attach'
+# From: https://stackoverflow.com/a/49001088
+tmux_create_default () {
+    # Use -d to allow the rest of the function to run
+    tmux new-session -d -s default -n 'TODO' 'vim ${HOME}/todo/todo.txt'
+    tmux new-window
+    # -d to prevent current window from changing
+    # tmux new-window -d -n Win2
+    # -d to detach any other client (which there shouldn't be,
+    # since you just created the session).
+    tmux attach-session -d -t default
+}
+alias ta='tmux attach -t default || tmux_create_default'
+
 
 # Python aliases
 alias ipy='ipython'
@@ -70,9 +82,6 @@ export PS1="[\u@${ML} ${COLOR}\w${STOPCOLOR}]\$ "
 
 # Kill YARN Job
 alias ykill="yarn application -kill"
-
-# QSub into small queue
-alias qrshs="qrsh -q goldml_small -l h_rss=10G"
 
 # To change the paths dynamicall
 alias epp="source $HOME/bin/epp_code"
