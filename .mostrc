@@ -10,7 +10,11 @@ setkey down j
 setkey up k
 setkey column_right l
 setkey page_down ^F
+unsetkey "f"
+setkey page_down f
 setkey page_up ^B
+unsetkey "b"
+setkey page_up b
 setkey exit q
 setkey exit ^C
 setkey bob gg
