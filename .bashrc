@@ -111,8 +111,8 @@ if [ -f ~/.bash_spark ]; then
     . ~/.bash_spark
 fi
 
-if [ -e "$HOME/.extra_bashrc"  ]; then
-    source "$HOME/.extra_bashrc"
+if [ -e "$HOME/.extra_zshrc"  ]; then
+    source "$HOME/.extra_zshrc"
 fi
 
 export EDITOR=/usr/bin/vim
