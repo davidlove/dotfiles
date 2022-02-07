@@ -57,7 +57,7 @@ alias vt='vim ${HOME}/todo/todo.txt'
 # From: https://stackoverflow.com/a/49001088
 tmux_create_default () {
     # Use -d to allow the rest of the function to run
-    tmux new-session -d -s default -n 'GTOP' 'gtop'
+    tmux new-session -d -s default -n 'TOP' 'btop'
     tmux new-window
     # -d to prevent current window from changing
     # tmux new-window -d -n Win2
