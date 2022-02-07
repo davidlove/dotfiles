@@ -87,3 +87,6 @@ then
     alias pytest='echo "* Using: $(which pythonw)"; pythonw -m pytest'
 fi
 
+# For fun: a function to uncompress Git objects
+zlibd() (printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - "$@" | gzip -dc)
+
