@@ -4,6 +4,16 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd -P )"
 
+# Identify the type of machine
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     REALPATH=$(which realpath);;
+    Darwin*)    REALPATH=$(which grealpath);;
+    CYGWIN*)    REALPATH=$(which exit);;
+    MINGW*)     REALPATH=$(which exit);;
+    *)          REALPATH=$(which exit)
+esac
+
 if [ ! -d $HOME/.config ]; then
     CMD="mkdir $HOME/.config"
     echo "$CMD"
@@ -11,7 +21,7 @@ if [ ! -d $HOME/.config ]; then
 fi
 
 for x in "$DIR"/.* "$DIR"/config/*; do
-    basex=$(realpath "$x" --relative-to "$DIR")
+    basex=$($REALPATH "$x" --relative-to "$DIR")
 
     if [ "$basex" = '.' ] \
     || [ "$basex" = '..' ] \
